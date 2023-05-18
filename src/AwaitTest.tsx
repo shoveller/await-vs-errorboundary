@@ -5,9 +5,9 @@ import {Suspense} from "react";
 const AwaitTest = () => {
   return (
     <Suspense fallback={<>로딩중</>}>
-      <Await resolve={api()} errorElement={<>에러발생</>} children={(value) => {
-         return <p>{value}</p>
-      }} />
+      <Await resolve={api()} errorElement={<>에러발생</>}>
+        {(value) => <p>{value}</p>}
+      </Await>
     </Suspense>
   )
 }
