@@ -20,9 +20,10 @@ const ErrorBoundaryTest = () => {
 export default ErrorBoundaryTest
 ```
 
-react-router-dom 은 저 코드를 좀 더 단순하게 만드는 <Await /> 이라는 헬퍼를 제공한다.
-데이터 로더와 `<ErrorBoundary />` 가 합쳐진 느낌.
-사용법이 훨씬 간단하다.
+react-router-dom 은 저 코드를 좀 더 단순하게 만드는 <Await /> 이라는 헬퍼를 제공한다.  
+`Promise` 를 throw 하는 `use` hook의 기능과 `<ErrorBoundary />` 가 합쳐진 느낌.  
+사용이 훨씬 간단하다.
+
 
 ```tsx
 const AwaitTest = () => {
