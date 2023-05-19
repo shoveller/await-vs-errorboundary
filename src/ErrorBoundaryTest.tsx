@@ -1,11 +1,13 @@
 import {ErrorBoundary} from "react-error-boundary";
 import {Suspense} from "react";
-import {dataAtom} from "./api.ts";
-import {useAtomValue} from "jotai";
+import {api, query} from "./api.ts";
+import {use} from "./use.ts";
 
 const Contents = () => {
-    // const data = use(api())
-    const data = useAtomValue(dataAtom)
+    const data: string = use(query({
+        queryKey: '/contents',
+        queryFn: () => api()
+    }))
 
     return <p>{data}</p>
 }
