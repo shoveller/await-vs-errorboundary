@@ -38,3 +38,25 @@ const AwaitTest = () => {
 
 export default AwaitTest
 ```
+
+또는
+
+```jsx
+const Contents = () => {
+    const value = useAsyncValue() as string;
+
+    return <p>{value}</p>
+}
+
+const AwaitTest2 = () => {
+    return (
+        <Suspense fallback={<>로딩중</>}>
+            <Await resolve={api()} errorElement={<>에러발생</>}>
+                <Contents />
+            </Await>
+        </Suspense>
+    )
+}
+
+export default AwaitTest2
+```

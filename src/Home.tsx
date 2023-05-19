@@ -27,6 +27,9 @@ const Home = () => {
         <NavLink to="use-await" style={style}>
             react-router-dom 으로 defered data 다루는 법
         </NavLink>
+        <NavLink to="use-await2" style={style}>
+            react-router-dom 으로 defered data 다루는 법2
+        </NavLink>
         <Outlet />
     </section>
   )
