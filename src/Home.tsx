@@ -21,6 +21,12 @@ const style: NavLinkStyle = ({ isActive }) => {
 const Home = () => {
   return (
     <section style={{ display: 'flex', flexDirection: 'column' }}>
+        <NavLink to="suspense-test" style={style}>
+            suspense의 동작원리
+        </NavLink>
+        <NavLink to="errorboundary-test" style={style}>
+            error-boundary의 동작원리
+        </NavLink>
         <NavLink to="use-error-boundary" style={style}>
             react-error-boundary 로 defered data 다루는 법
         </NavLink>
@@ -30,6 +36,7 @@ const Home = () => {
         <NavLink to="use-await2" style={style}>
             react-router-dom 으로 defered data 다루는 법2
         </NavLink>
+
         <Outlet />
     </section>
   )
